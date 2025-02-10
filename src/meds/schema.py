@@ -17,8 +17,21 @@ from typing_extensions import NotRequired, TypedDict
 
 # The patient data schema.
 
+
+class BirthCode:
+    def __init__(self, *codes):
+        self.codes = set(codes)  # Store multiple codes
+
+    def __eq__(self, other):
+        return other in self.codes  # Allow comparison with multiple codes
+
+    def __repr__(self):
+        return f"BirthCode({self.codes})"
+
+
 # We define some codes for particularly important events
-birth_code = "SNOMED/184099003"
+# Override meds.birth_code
+birth_code = BirthCode("SNOMED/184099003", "SNOMED/3950001")
 death_code = "SNOMED/419620001"
 
 
