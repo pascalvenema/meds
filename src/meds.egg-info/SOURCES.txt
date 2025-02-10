@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/meds/__init__.py
+src/meds/py.typed
+src/meds/schema.py
+src/meds.egg-info/PKG-INFO
+src/meds.egg-info/SOURCES.txt
+src/meds.egg-info/dependency_links.txt
+src/meds.egg-info/requires.txt
+src/meds.egg-info/top_level.txt
+tests/test_schema.py
